@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard con GitHub</title>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: rgb(76, 232, 76);
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                /*El organiza el contenido en formato de caja flexible (horizontal)*/
+            }
+            /*Estilos para el menu lateral*/
+            .sideber{
+                width: 220px;/*ancho del menu*/
+                background-color: rgb(170, 244, 170);
+                color: rgb(0, 86, 30);
+                height: 100vh;/*altura completa de la ventana*/
+                padding: 20px;
+                position: fixed;/*mantenga fijo en su lugar al mover el scroll*/
+            }
+            .sideber h2{
+                margin-top: 0;/*Elimina el margen superior*/
+                text-align: center;
+            }
+            .sideber ul{
+                list-style: none;/*Elimina los puntos de la lista*/
+                padding: 0;
+            }
+            .sideber ul li:hover{
+                background-color: rgb(2, 255, 44);/*color cuando pasa el mouse*/
+                cursor: pointer;/*cambiar el curso a mano*/
+            }
+            /*Contenedor principal */
+            .main-content{
+                margin-left: 220px;/*desplazar el contenido a la derecha*/
+                padding: 20px;
+                width: 100%;/*Ocupa espacio de ancho disponible*/
+            }
+            h1{
+                text-align: center;
+                color: rgb(0, 86, 30);
+            }
+            .dashboard{
+                display: grid;/*organizar los card*/
+                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+                /*ajusta la columna como min 250px*/
+                gap: 20px;/*espacio entre las tarjetas*/
+                margin-top: 30px;/*espacio superior al titulo*/
+            }
+            .card{
+                background-color: rgb(147, 241, 169);
+                border-radius: 1opx;/*borde redondeado*/
+                padding: 20px;
+                box-shadow: 0 4px 8px rgb(28, 115, 58);/*efecto sombra*/
+                text-align: center;
+            }
+            .card h2{
+                margin: 10px 0;/*margen de arriba y abajo*/
+                color:rgb(0, 86, 30)     
+            }
+            .card p{
+                font-size: 18px;
+                color: rgb(0, 86, 30);
+            }
+            *{
+                box-sizing: border-box;/*borde y el padding no aumente su tamaño*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sideber"> 
+            <h2>MENÚ DE OPCIONES</h2>
+            <ul>
+                <li>Inicio</li>
+                <li>Resumen</li>
+                <li>Préstamos</li>
+                <li>Contacto</li>
+            </ul>
+        </div>
+        <!--Contenido principal-->
+        <div class="main-content">
+            <h1>Dashboard Financiero - Préstamos Bancarios</h1>
+            <!--Contenedor general dashboard-->
+        <div class="dashboard">
+            <div class="card">
+                <h2>Cuota inicial</h2>
+                <p>S/ 32,550</p>
+            </div>
+            <div class="card">
+                <h2>Monto Financiado</h2>
+                <p>S/ 122,450</p>
+            </div>
+            <div class="card">
+                <h2>Cuota Inicial</h2>
+                <p>S/ 3,302.47</p>
+            </div>
+            
+          </div>        
+        </div>
+    </body>
+</html>
